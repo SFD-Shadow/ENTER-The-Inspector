@@ -1344,14 +1344,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 242711986773156148, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
+      propertyPath: m_MinValue
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 242711987106332674, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 242711987106332674, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 242711987106332674, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.6756757
+      objectReference: {fileID: 0}
     - target: {fileID: 242711987218610872, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 221431771}
+    - target: {fileID: 242711987288968939, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.6756757
+      objectReference: {fileID: 0}
+    - target: {fileID: 242711987288968939, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 242711987288968939, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.6756757
+      objectReference: {fileID: 0}
     - target: {fileID: 242711987298937962, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 221431771}
+    - target: {fileID: 242711988414629881, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
 --- !u!1001 &4376588767728719165
