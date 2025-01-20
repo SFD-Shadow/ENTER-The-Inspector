@@ -101,14 +101,14 @@ Material:
     - Mask_Texture: 0
     - Neon: 0
     - Overlay_Grid: 0
-    - Overlay_Texture: 1
+    - Overlay_Texture: 0
     - Overlay_Texture_Sheet: 0
     - Particle_Render: 0
     - Pixelization: 1
     - Posterization: 0
     - ScreenRotation: 0
     - Shake: 0
-    - Static_Noise: 0
+    - Static_Noise: 1
     - Texture_Distorsion: 0
     - Vignette: 0
     - Wave_Distorsion: 1
@@ -153,9 +153,9 @@ Material:
     - _MaskAlpha: 0
     - _MaskAmount: 0
     - _MaxAngle: 0.5
-    - _MaxRange: Infinity
+    - _MaxRange: 10
     - _Metallic: 0
-    - _MinRange: 0
+    - _MinRange: 9.99
     - _Mode: 0
     - _NeonBrightness: 3
     - _NeonColorAlpha: 1
@@ -191,9 +191,9 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StaticAlpha: 0.17
+    - _StaticAlpha: 0.072
     - _StaticBrightness: 1
-    - _StaticIntensity: -0.34
+    - _StaticIntensity: -0.1
     - _TimeGirls: 1
     - _UPS: 15
     - _UVSec: 0

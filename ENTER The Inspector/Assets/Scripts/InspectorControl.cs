@@ -7,11 +7,11 @@ public class InspectorControl : MonoBehaviour
     public float MovementSpeed = 1;
 	public float JumpForce = 1;
 	
-	private Rigidbody2D _rigidbody;
+	private Rigidbody _rigidbody;
 	
 	void Start()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -21,7 +21,7 @@ public class InspectorControl : MonoBehaviour
 		
 		if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
 		{
-			_rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
+			_rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode.Impulse);
 		}
     }
 }

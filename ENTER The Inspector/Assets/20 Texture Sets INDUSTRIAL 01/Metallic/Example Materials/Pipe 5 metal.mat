@@ -22,7 +22,7 @@ Material:
     m_TexEnvs:
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: 1830a606b04165340913e4bffc22888e, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     - _Cube:
         m_Texture: {fileID: 8900000, guid: 5eb96b8543bb4784e97c06b21053e6eb, type: 2}
@@ -30,11 +30,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 356ba3c6e1eb6684b93e644f6da6c742, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 2800000, guid: b96ca3c741114b94a8ef8b5f9249101b, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     - _Spec_Gloss_Reflec_Masks:
         m_Texture: {fileID: 2800000, guid: d740fa4bfb7c69442abc06ddd74f7950, type: 3}
@@ -47,9 +47,9 @@ Material:
     - _FrezPow: 0.25
     - _Gloss: 0.5
     - _Metalics: 0.5
-    - _Parallax: 0.02
+    - _Parallax: 0.005
     - _Reflection: 0.5
-    - _Shininess: 1.5
+    - _Shininess: 0.01
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
