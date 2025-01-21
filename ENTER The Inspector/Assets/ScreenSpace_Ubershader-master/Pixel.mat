@@ -172,8 +172,8 @@ Material:
     - _OverlayStartFrame: 0
     - _OverlayTotalFrames: 16
     - _OverlayTransparent: 0
-    - _PSize_X: 2
-    - _PSize_Y: 2
+    - _PSize_X: 1.75
+    - _PSize_Y: 1.75
     - _Parallax: 0.02
     - _Period: 6
     - _PosterizationSteps: 16
