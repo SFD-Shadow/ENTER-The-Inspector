@@ -193,7 +193,7 @@ Shader "Leviant's Shaders/ScreenSpace Ubershader v2.8"
 	}
 	SubShader 
 	{
-		Tags { "Queue"="Overlay+2" "RenderType"="Overlay" "IgnoreProjector" = "True" "ForceNoShadowCasting" = "True" "LightMode" = "Always"}
+		Tags { "Queue"="Overlay+2" "RenderType"="Transparent" "IgnoreProjector" = "True" "ForceNoShadowCasting" = "True" "LightMode" = "Always"}
 		Cull Off
 		Lighting Off
 		ZTest Always

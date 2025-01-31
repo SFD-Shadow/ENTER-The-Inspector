@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Pixel
+  m_Name: Loading
   m_Shader: {fileID: 4800000, guid: 114d92f5956657d4da09378841696528, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
@@ -18,7 +18,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 32766
+  m_CustomRenderQueue: 32767
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -69,8 +69,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OverlayTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 4.78}
+        m_Texture: {fileID: 2800000, guid: 266db0f8c45e2ed4eaaa01d0cb70b1db, type: 3}
+        m_Scale: {x: 0.5, y: 1}
         m_Offset: {x: -0.03, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
@@ -101,14 +101,14 @@ Material:
     - Mask_Texture: 0
     - Neon: 0
     - Overlay_Grid: 0
-    - Overlay_Texture: 0
+    - Overlay_Texture: 1
     - Overlay_Texture_Sheet: 0
     - Particle_Render: 0
     - Pixelization: 1
     - Posterization: 0
     - ScreenRotation: 0
     - Shake: 0
-    - Static_Noise: 1
+    - Static_Noise: 0
     - Texture_Distorsion: 0
     - Vignette: 0
     - Wave_Distorsion: 1
@@ -193,7 +193,7 @@ Material:
     - _SrcBlend: 1
     - _StaticAlpha: 0.075
     - _StaticBrightness: 1
-    - _StaticIntensity: -0.1
+    - _StaticIntensity: -0.6
     - _TimeGirls: 1
     - _UPS: 15
     - _UVSec: 0

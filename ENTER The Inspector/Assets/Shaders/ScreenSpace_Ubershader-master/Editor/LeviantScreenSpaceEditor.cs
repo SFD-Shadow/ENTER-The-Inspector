@@ -485,7 +485,7 @@ public class LeviantScreenSpaceEditor : ShaderGUI
     //applying dark or light theme text
     public void generateMessage(String textToDis, GUIStyle textStyle)
     {
-        String colorModifier = "000000";
+
     }
 
     void DrawMainSettings()
