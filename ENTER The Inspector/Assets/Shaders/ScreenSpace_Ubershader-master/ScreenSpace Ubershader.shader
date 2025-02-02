@@ -193,7 +193,7 @@ Shader "Leviant's Shaders/ScreenSpace Ubershader v2.8"
 	}
 	SubShader 
 	{
-		Tags { "Queue"="Overlay+2" "RenderType"="Transparent" "IgnoreProjector" = "True" "ForceNoShadowCasting" = "True" "LightMode" = "Always"}
+		Tags { "Queue"="Overlay+2" "RenderType"="Overlay" "IgnoreProjector" = "True" "ForceNoShadowCasting" = "True" "LightMode" = "Always"}
 		Cull Off
 		Lighting Off
 		ZTest Always
@@ -1306,7 +1306,7 @@ Shader "Leviant's Shaders/ScreenSpace Ubershader v2.8"
 					//staticValue *= staticValue <= _StaticIntensity ? _StaticBrightness / _StaticIntensity : 0.0;
 					//float3 staticColor = lerp(color.rgb, _StaticColour.rgb, saturate(staticValue + _StaticAlpha - 1));
 
-					float staticValue = hash13(float3(grabPos.xy, _Time.x)) * tan(_StaticIntensity * UNITY_HALF_PI);
+					float staticValue = hash13(float3(grabPos.xy, floor(600 * _Time.x) / 600)) * tan(_StaticIntensity * UNITY_HALF_PI);
 					float3 staticColor = staticValue * _StaticColour.rgb * lerp(color.rgb, 1.0, _StaticAlpha);
 					color.rgb = lerp(color.rgb, staticColor + color.rgb * _StaticBrightness, i.falloff);
 				}

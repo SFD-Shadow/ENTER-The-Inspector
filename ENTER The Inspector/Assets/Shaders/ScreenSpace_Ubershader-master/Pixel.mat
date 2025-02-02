@@ -45,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DitheringMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 4bbe668726660d946b5541f1edea73de, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -90,7 +90,7 @@ Material:
     - Chromatic_Aberration: 0
     - Color_Tint: 0
     - Distorsion: 0
-    - Dithering: 0
+    - Dithering: 1
     - Glitch: 0
     - HSV_Desaturate_Selected: 1
     - HSV_Selection: 0
@@ -105,7 +105,7 @@ Material:
     - Overlay_Texture_Sheet: 0
     - Particle_Render: 0
     - Pixelization: 1
-    - Posterization: 0
+    - Posterization: 1
     - ScreenRotation: 0
     - Shake: 0
     - Static_Noise: 1
@@ -176,7 +176,7 @@ Material:
     - _PSize_Y: 1.75
     - _Parallax: 0.02
     - _Period: 6
-    - _PosterizationSteps: 16
+    - _PosterizationSteps: 248
     - _RedInvert: 0
     - _SIntensity_X: 0.01
     - _SIntensity_Y: 0.01
