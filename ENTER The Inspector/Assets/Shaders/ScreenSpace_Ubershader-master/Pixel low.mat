@@ -193,7 +193,7 @@ Material:
     - _SrcBlend: 1
     - _StaticAlpha: 0.043
     - _StaticBrightness: 1
-    - _StaticIntensity: -0.58
+    - _StaticIntensity: -1
     - _TimeGirls: 1
     - _UPS: 15
     - _UVSec: 0
