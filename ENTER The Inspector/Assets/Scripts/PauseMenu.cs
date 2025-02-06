@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 	
 	public GameObject PauseMenuUI;
 	public AudioSource audioSourceFreeze1;
+	public GameObject ScreenFX;
 	
 	void Start()
 	{
@@ -36,6 +37,7 @@ public class PauseMenu : MonoBehaviour
 		Time.timeScale = 1f;
 		GameIsPaused = false;
 		audioSourceFreeze1.pitch = 1;
+		ScreenFX.SetActive(true);
 	}
 	
 	void Pause ()
@@ -44,6 +46,7 @@ public class PauseMenu : MonoBehaviour
 		Time.timeScale = 0f;
 		GameIsPaused = true;
 		audioSourceFreeze1.pitch = 0;
+		ScreenFX.SetActive(false);
 	}
 	
 }
