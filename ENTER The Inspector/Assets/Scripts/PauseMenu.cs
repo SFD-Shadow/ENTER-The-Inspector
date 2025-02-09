@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
 	public bool GameIsPaused = false;
-	
 	public GameObject PauseMenuUI;
-	public AudioSource audioSourceFreeze1;
-	public GameObject ScreenFX;
+	public static PauseMenu instance;
+	
+	void Awake()
+	{
+		if(instance != null)
+		{
+			Destroy(gameObject);
+		}
+		else
+		{
+			instance = this;
+		}
+	}
+	
 	
 	void Start()
 	{
+		DontDestroyOnLoad(gameObject);
 		PauseMenuUI.SetActive(false);
+		
 	}
 
     void Update()
@@ -36,8 +50,6 @@ public class PauseMenu : MonoBehaviour
 		PauseMenuUI.SetActive(false);
 		Time.timeScale = 1f;
 		GameIsPaused = false;
-		audioSourceFreeze1.pitch = 1;
-		ScreenFX.SetActive(true);
 	}
 	
 	void Pause ()
@@ -45,8 +57,20 @@ public class PauseMenu : MonoBehaviour
 		PauseMenuUI.SetActive(true);
 		Time.timeScale = 0f;
 		GameIsPaused = true;
-		audioSourceFreeze1.pitch = 0;
-		ScreenFX.SetActive(false);
 	}
 	
+	private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+	
+	private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+	
+	private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        GameIsPaused = false;
+    }
 }
