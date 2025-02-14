@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
 	public bool GameIsPaused = false;
 	public GameObject PauseMenuUI;
 	public static PauseMenu instance;
+	public GameObject SettingsMenuUI;
+	public GameObject PauseResume;
 	
 	void Awake()
 	{
@@ -26,6 +28,7 @@ public class PauseMenu : MonoBehaviour
 	{
 		DontDestroyOnLoad(gameObject);
 		PauseMenuUI.SetActive(false);
+		SettingsMenuUI.SetActive(false);
 		
 	}
 
@@ -50,6 +53,8 @@ public class PauseMenu : MonoBehaviour
 		PauseMenuUI.SetActive(false);
 		Time.timeScale = 1f;
 		GameIsPaused = false;
+		SettingsMenuUI.SetActive(false);
+		PauseResume.SetActive(true);
 	}
 	
 	void Pause ()

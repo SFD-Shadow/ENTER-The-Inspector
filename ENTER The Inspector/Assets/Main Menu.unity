@@ -7470,6 +7470,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseAudio: {fileID: 467879463}
   GameIsPaused: 0
+--- !u!1 &1088521945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 242711987374174460, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
+  m_PrefabInstance: {fileID: 1274343956}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1110588221
 GameObject:
   m_ObjectHideFlags: 0
@@ -8026,6 +8031,14 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1324229291, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
+      propertyPath: PauseResume
+      value: 
+      objectReference: {fileID: 1088521945}
+    - target: {fileID: 1324229291, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
+      propertyPath: SettingsMenuUI
+      value: 
+      objectReference: {fileID: 2004942722}
     - target: {fileID: 1693920285, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 5
@@ -8184,7 +8197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 242711986432603728, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 242711986581911754, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
       propertyPath: m_Color.b
@@ -8288,7 +8301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 242711988414629881, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 242711988414629887, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
       propertyPath: m_Color.b
@@ -19859,6 +19872,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985225191}
   m_CullTransparentMesh: 1
+--- !u!1 &2004942722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 242711988414629881, guid: 20e7f2540f80294498c6b20fd0bfb0dc, type: 3}
+  m_PrefabInstance: {fileID: 1274343956}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2111266129
 GameObject:
   m_ObjectHideFlags: 0

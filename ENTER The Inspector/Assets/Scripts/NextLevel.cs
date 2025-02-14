@@ -8,10 +8,9 @@ public class NextLevel : MonoBehaviour
 {
 	public Animator animator;
 	
-	
 	public void OnTriggerStay(Collider other)
 	{
-		if (Input.GetKeyDown(KeyCode.E))
+		if (Input.GetKey(KeyCode.E))
 		{
 		   animator.SetBool("NextLevel", true);
 		}
