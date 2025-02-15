@@ -8,19 +8,40 @@ public class InspectorControl : MonoBehaviour
     public float MovementSpeed = 1;
 	public float JumpForce = 1;
 	public Animator animator;
+	public LayerMask GROUND;
 	private bool Walking = false;
 	private bool Idleing = false;
 	private bool Running = false;
 	private bool RunStop = false;
+	public bool IsGrounded = false;
 	
 	private Rigidbody _rigidbody;
 	
 	void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+		IsGrounded = true;
     }
 
-    void Update()
+    //Is grounded check
+
+    private void OnCollisionEnter(Collision collision)
+	{
+		IsGrounded = true;
+		animator.SetBool("Jump", false);
+		animator.SetBool("IsGrounded", true);
+	}
+	
+	private void OnCollisionExit(Collision collision)
+	{
+		IsGrounded = false;
+		animator.SetBool("Jump", true);
+		animator.SetBool("IsGrounded", false);
+	}
+	
+	//Movement & Jumping
+	
+	void Update()
     {
         var movement = Input.GetAxis("Horizontal");
 		transform.position += new Vector3(movement,0,0) * Time.deltaTime * MovementSpeed;
@@ -74,7 +95,6 @@ public class InspectorControl : MonoBehaviour
 	    }
 		
 	
-		
 		//trigger walking paramater
 		
 		if (Walking)
@@ -106,6 +126,22 @@ public class InspectorControl : MonoBehaviour
 		else
 		{
 			animator.SetBool("Run", false);
+		}
+		
+		//Looking torwards or away from 4th wall
+		
+		if (Input.GetKey(KeyCode.W))
+		{
+			animator.SetBool("LookForward", true);
+		}
+		else if (Input.GetKey(KeyCode.S))
+		{
+			animator.SetBool("LookBack", true);
+		}
+		else
+		{
+			animator.SetBool("LookForward", false);
+			animator.SetBool("LookBack", false);
 		}
     }
 }
