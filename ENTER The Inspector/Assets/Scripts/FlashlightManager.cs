@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FlashlightManager : MonoBehaviour
 {
 	public bool Flashlight = false;
-	
-	public GameObject OffMenuUI;
+	public Animator animator;
+	public GameObject FlashLight;
 	
 	void Start()
 	{
-		OffMenuUI.SetActive(false);
+		FlashLight.SetActive(false);
 	}
 
     void Update()
     {
+		var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+		var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+		
 		if (Input.GetKeyDown(KeyCode.F))
 		{
 			if (Flashlight)
@@ -31,14 +36,16 @@ public class FlashlightManager : MonoBehaviour
 	
 	public void On ()
 	{
-		OffMenuUI.SetActive(false);
+		FlashLight.SetActive(false);
 		Flashlight = false;
+		animator.SetBool("LookAtLight", false);
 	}
 	
 	void Off ()
 	{
-		OffMenuUI.SetActive(true);
+		FlashLight.SetActive(true);
 		Flashlight = true;
+		animator.SetBool("LookAtLight", true);
 	}
 	
 }

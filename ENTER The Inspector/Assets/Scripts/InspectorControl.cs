@@ -14,6 +14,7 @@ public class InspectorControl : MonoBehaviour
 	private bool Running = false;
 	private bool RunStop = false;
 	public bool IsGrounded = false;
+	private bool StopWalk = false;
 	
 	private Rigidbody _rigidbody;
 	
@@ -43,13 +44,15 @@ public class InspectorControl : MonoBehaviour
 	
 	void Update()
     {
-        var movement = Input.GetAxis("Horizontal");
-		transform.position += new Vector3(movement,0,0) * Time.deltaTime * MovementSpeed;
-		
-		
-		if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
+        if (StopWalk == false)
 		{
-			_rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode.Impulse);
+		    var movement = Input.GetAxis("Horizontal");
+		    transform.position += new Vector3(movement,0,0) * Time.deltaTime * MovementSpeed;
+		
+		    if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
+		    {
+		        _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode.Impulse);
+		    }
 		}
 		
 		//running input
@@ -58,7 +61,7 @@ public class InspectorControl : MonoBehaviour
 		{
 			if (RunStop == false)
 			{
-				MovementSpeed = MovementSpeed * 2;
+				MovementSpeed = 5;
 				Running = true;
 				RunStop = true;
 			}
@@ -68,12 +71,11 @@ public class InspectorControl : MonoBehaviour
 		{
 			RunStop = false;
 			Running = false;
-			MovementSpeed = MovementSpeed / 2;
+			MovementSpeed = 3;
 		}
 		
 		
 		//check if the player is walking, not running
-		
 		
 		
 		if (Input.GetKey(KeyCode.D)) 
@@ -133,15 +135,18 @@ public class InspectorControl : MonoBehaviour
 		if (Input.GetKey(KeyCode.W))
 		{
 			animator.SetBool("LookForward", true);
+			StopWalk = true;
 		}
 		else if (Input.GetKey(KeyCode.S))
 		{
 			animator.SetBool("LookBack", true);
+			StopWalk = true;
 		}
 		else
 		{
 			animator.SetBool("LookForward", false);
 			animator.SetBool("LookBack", false);
+			StopWalk = false;
 		}
     }
 }
